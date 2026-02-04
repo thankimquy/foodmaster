@@ -1,20 +1,28 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
 
-# Run and deploy your AI Studio app
+# 🍱 FoodMaster Pro - Hướng dẫn cài đặt lên iPhone
 
-This contains everything you need to run your app locally.
+Ứng dụng này được thiết kế như một **PWA (Progressive Web App)**, cho phép bạn cài đặt trực tiếp vào iPhone mà không cần qua App Store.
 
-View your app in AI Studio: https://ai.studio/apps/temp/1
+## 🚀 Cách cài đặt lên iPhone (Dùng Vercel - Nhanh nhất)
 
-## Run Locally
+1. **Lên GitHub**: Tạo Repository mới và upload toàn bộ code này lên.
+2. **Kết nối Vercel**: 
+   - Truy cập [Vercel.com](https://vercel.com), đăng nhập bằng GitHub.
+   - Nhập (Import) dự án này và nhấn **Deploy**.
+   - Bạn sẽ nhận được 1 đường link `https://tên-của-bạn.vercel.app`.
+3. **Mở trên iPhone**:
+   - Dùng **Safari** mở đường link đó.
+   - Nhấn nút **Chia sẻ** (biểu tượng hình vuông có mũi tên lên).
+   - Chọn **Thêm vào màn hình chính (Add to Home Screen)**.
+   - Nhấn **Thêm**.
 
-**Prerequisites:**  Node.js
+## 📱 Tại sao nên dùng cách này?
+- **Offline 100%**: Sau khi cài xong, bạn có thể tắt Wifi/4G mà vẫn dùng được.
+- **Dữ liệu an toàn**: Mọi đơn hàng và menu lưu trực tiếp trên iPhone của bạn (LocalStorage).
+- **Trải nghiệm Native**: Không có thanh địa chỉ trình duyệt, cảm giác như app thật.
 
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🛠 Cấu trúc dự án
+- `App.tsx`: Giao diện chính và xử lý logic.
+- `sw.js`: Trình quản lý chế độ Offline.
+- `manifest.json`: Khai báo thông tin App cho iPhone.
+- `services/geminiService.ts`: Phân tích báo cáo bằng AI.
